@@ -1,5 +1,6 @@
 require "http"
 require "json"
+require 'ascii_charts'
 
 line_width = 40
 
@@ -98,3 +99,5 @@ if any_precipitation == true
 else
   puts "You probably won't need an umbrella."
 end
+
+puts AsciiCharts::Cartesian.new([[0, 61], [1, 47], [2, 33], [3, 19], [4, 35], [5, 52], [6, 68], [7, 66], [8, 64], [9, 62], [10, 71], [11, 80]], :bar => true, :hide_zero => true).draw
